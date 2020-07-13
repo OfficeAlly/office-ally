@@ -1,0 +1,70 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
+                <!-- breadcrumb-list start -->
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">{{ entry.subtitle }}</li>
+                    <!-- <li class="breadcrumb-item active">About Us</li> -->
+                </ul>
+                <!-- breadcrumb-list end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+
+<!-- main-content-wrap start -->
+<div class="main-content-wrap about-us-page about-area">
+    <!-- about-area start -->
+    <div class="about-area margin-bottom-double">
+        <div class="container">
+            <div class="row">
+                {% for block in entry.sectionDescriptions.all() %}
+                {% switch block.type %}
+                {% case 'sectionDescriptions' %}
+                {% if block.imageSingleSwitch %}
+                <div class="col-lg-6">
+                    <div class="about-contents">
+                        <h3>{{ block.sectionTitle }}</h3>
+                        <p>{{ block.sectionDescription }}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <a href="#"><img src="{{ block.sectionImage.one().getUrl() }}" alt="{{ block.altField }}"></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <a href="#"><img src="{{ block.sectionImage.one().getUrl() }}" alt="{{ block.altField }}"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-contents">
+                        <h3>{{ block.sectionTitle }}</h3>
+                        <p>{{ block.sectionDescription }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                {% endswitch %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% include '_includes/testimonials/testimonials' %}
+    
+    {% include '_includes/brands/brands' %}
+
+</div>
+<!-- main-content-wrap end -->
+
+{% endblock %}

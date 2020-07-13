@@ -1,0 +1,173 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
+                <!-- breadcrumb-list start -->
+                <!-- <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Shop</li>
+                </ul> -->
+                <!-- breadcrumb-list end -->
+                <p>{{ entry.subtitle }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+
+<!-- main-content-wrap start -->
+<div class="main-content-wrap shop-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 order-lg-1 order-2">
+                <!-- shop-sidebar-wrap start -->
+                <div class="shop-sidebar-wrap">
+                    <!-- shop-sidebar start -->
+                    <div class="shop-sidebar mb--30">
+                        <h4 class="title">Clearnace</h4>
+                        <ul>  
+                            {% set entriesIds = craft.entries.section('products').ids() %}
+                            {% set categories = craft.categories.relatedTo({ 
+                                sourceElement: entriesIds,
+                                field: 'clearance'
+                            }).all() %}
+
+                            {% for category in categories %}
+                            {% set entriesCount = craft.entries.relatedTo(category).count() %}
+                            <li><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- shop-sidebar end -->
+
+                    <div class="shop-sidebar mb--30">
+                        <h4 class="title">Brands</h4>
+                        <ul> 
+                            {% set entriesIds = craft.entries.section('products').ids() %}
+                            {% set categories = craft.categories.relatedTo({ 
+                                sourceElement: entriesIds,
+                                field: 'brand'
+                            }).all() %}
+
+                            {% for category in categories %}
+                            {% set entriesCount = craft.entries.relatedTo(category).count() %}
+                            <li><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- shop-sidebar end -->
+
+                    <!-- shop-sidebar start -->
+                    <div class="shop-sidebar mb--30">
+                        <h4 class="title">Products</h4>
+                        <ul>  
+                            {% set entriesIds = craft.entries.section('products').ids() %}
+                            {% set categories = craft.categories.relatedTo({ 
+                                sourceElement: entriesIds,
+                                field: 'product'
+                            }).all() %}
+
+                            {% for category in categories %}
+                            {% set entriesCount = craft.entries.relatedTo(category).count() %}
+                            <li><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- shop-sidebar end -->
+                </div>
+                <!-- shop-sidebar-wrap end -->
+            </div>
+            <div class="col-lg-9 order-lg-2 order-1">
+                <!-- shop-product-wrapper start -->
+                <div class="shop-product-wrapper">
+                    
+                    <!-- shop-products-wrap start -->
+                    <div class="shop-products-wrap">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show">
+                                <div class="shop-product-wrap">
+                                    <div class="row">
+                                        {% paginate craft.entries.section('products').limit(9) as products %}
+                                        {% for entry in products %}
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <!-- single-product-wrap start -->
+                                            <div class="single-product-wrap">
+                                                <div class="product-image">
+                                                    {% for block in entry.productDisplayImages.all() %}
+                                                    {% if block.type == "angleImage" %}
+                                                    <a class="img-bottom" href="{{ entry.url }}"><img src="{{ block.angleImage.one().getUrl() }}" alt="{{ block.angleAltField }}"></a>
+                                                    {% endif %}
+                                                    {% if block.type == "frontImage" %}
+                                                    <a class="img-top" href="{{ entry.url }}"><img src="{{ block.frontImage.one().getUrl() }}" alt="{{ block.frontAltField }}"></a>
+                                                    {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+                                                    <div class="price-box">
+                                                        <!-- <span class="old-price">140.00</span> -->
+                                                        <span class="new-price">${{ entry.productPrice }} <!--<span class="currency">CAD</span>--></span>
+                                                        <span>|</span>
+                                                        <span class="qty">Qty {{ entry.productQuantity }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- single-product-wrap end -->
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- shop-products-wrap end -->
+                    
+                    <!-- paginatoin-area start -->
+                    <div class="paginatoin-area">
+                        <div class="row">
+                            <!-- <div class="col-lg-6 col-md-6">
+                                <p>Showing 10-13 of 13 item(s) </p>
+                            </div> -->
+                            <div class="col-lg-6 col-md-6">
+                                <ul class="pagination-box">
+                                    {% if paginate.prevUrl %}
+                                    <li><a class="Previous" href="{{ paginate.prevUrl }}">Previous</a>
+                                    </li>
+                                    {% endif %}
+
+                                    {% for page, url in paginate.getPrevUrls(3) %}
+                                    <li><a href="{{ url }}">{{ page }}</a></li>
+                                    {% endfor %}
+
+                                    <li class="active"><a href="#">{{ paginate.currentPage }}</a></li>
+
+                                    {% for page, url in paginate.getNextUrls(3) %}
+                                    <li><a href="{{ url }}">{{ page }}</a></li>
+                                    {% endfor %}
+
+                                    {% if paginate.nextUrl %}
+                                    <li>
+                                      <a class="Next" href="{{ paginate.nextUrl }}"> Next </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- paginatoin-area end -->
+                </div>
+                <!-- shop-product-wrapper end -->
+            </div>
+        </div>
+        {% include '_includes/brands/brands' %}
+    </div>
+</div>
+<!-- main-content-wrap end -->
+
+{% endblock %}

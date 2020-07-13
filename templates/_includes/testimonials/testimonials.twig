@@ -1,0 +1,29 @@
+<!-- testimonial-area start -->
+{% for home in craft.entries.section('home').all() %}
+<div class="testimonial-area testimonial-bg overlay section-ptb">
+    <div class="container">
+        <div class="row">
+            <h2 class="client-title">{{ entry.testimonialTitle }}</h2>
+            <div class="col-lg-8 offset-md-2 col-md-8 col-sm-12">
+                <div class="testimonial-slider">
+                    {% for block in home.testimonialSlider.all() %}
+                    {% if block.type == "testimonial" %}
+                    <div class="testimonial-inner text-center">
+                        <div class="test-cont">
+                            <!-- <img src="assets/images/icon/2.png" alt=""> -->
+                            <p>{{ block.testimonialDescription }}</p>
+                        </div>
+                        <div class="test-author">
+                            <h4>{{ block.testimonialClient }}</h4>
+                            <p>{{ block.testimonialOccupation }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- testimonial-area end -->

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Office Allies – Sourcing and Buying Premium Used Office Furniture!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ siteUrl }}assets/images/favicon.ico">
+    
+    <!-- CSS 
+    ========================= -->
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/bootstrap.min.css">
+    
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/simple-line-icons.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/ionicons.min.css">
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/plugins.css">
+    
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/style.css">
+    <link rel="stylesheet" href="{{ siteUrl }}css/swipe.css">
+    <link rel="stylesheet" href="{{ siteUrl }}css/slick.css">
+    <link rel="stylesheet" href="{{ siteUrl }}css/custom.css">
+    
+    <!-- Modernizer JS -->
+    <script src="{{ siteUrl }}assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!-- Main Wrapper Start -->
+<main class="main-wrapper">
+<!-- header-area start -->
+<div class="header-area">
+    <nav class="navbar navbar-expand-lg navbar-light nav-background">
+        <div class="container main-menu-area">
+            <a class="logo navbar-brand" href="index.html"><img src="{{ siteUrl }}images/office-iq-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/we-buy">We Buy!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- header-area end -->
+{% block main %}
+
+{% endblock %}
+</main>
+<!-- Main Wrapper End -->
+<!-- footer-area start -->
+<footer class="footer-area">
+    <div class="footer-top pt--40 pb--100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-info mt--60">
+                        <div class="footer-title">
+                            <h3 class="orange">Contact</h3>
+                        </div>
+                        <ul class="footer-info-list">
+                            <li>
+                                <i class="ion-ios-location-outline"></i>{{ footer.address }}
+                            </li>
+                            <li>
+                                <i class="ion-ios-email-outline"></i>{{ footer.eMail }}
+                            </li>
+                            <li>
+                                <i class="ion-ios-telephone-outline"></i><a href="tel:819-328-8629">{{ footer.phone }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4">
+                    <div class="footer-info mt--60">
+                        <div class="footer-title">
+                            <h3 class="orange">Quick Links</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="office-iq.html">Office IQ</a></li>
+                            <li><a href="home-iq.html">Home IQ</a></li>
+                            <li><a href="bargain-bin.html">The Bargain Bin</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-md-4 footer-product">
+                    <div class="footer-title">
+                        <h3 class="orange">Latest Blog Post</h3>
+                    </div>
+                    <!-- single-product-wrap start -->
+                    {% for entry in craft.entries.section('blog').limit(1).all() %}
+                    <div class="media single-product-wrap">
+                        <div class="product-image footer-img">
+                            <a href="{{ entry.url }}">
+                                {% for block in entry.blogImage.all() %}
+                                {% if block.type == 'blogImage' %}
+                                <img class="img-fluid" src="{{ block.blogImage.one().getUrl('threeSixtyTwoEightyThumb') }}" alt="{{ block.altField }}">
+                                {% endif %}
+                                {% endfor %}
+                            </a>
+                        </div>
+                        <div class="media-body product-content">
+                            <h3><a href="product-details.html">{{ entry.title }}</a></h3>
+                            <div class="left">
+                                <!-- <span>$420.00</span>
+                                <span>|</span>
+                                <span>Qty 3</span> -->
+                                <p>{{ entry.subtitle }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- single-product-wrap end -->
+                </div>
+                <div class="col-md-4 footer-product">
+                    <div class="footer-title">
+                        <h3 class="orange newsletter">Be the first to know about our new products</h3>
+                    </div>
+                    <form id="newsletter" class="form-inline newsletter" role="form">
+                        <div>
+                            <label class="sr-only" for="exampleInputName">First Name</label>
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="First Name">
+                            <label class="sr-only" for="exampleInputName">Email Address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email Address">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-submit"><i class="icon-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6  col-md-6"><div class="copyright">
+                    <p>{{ footer.copyright }}</p>
+                </div></div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-social">
+                        <ul>
+                            {% for row in footer.socialMedia %}
+                            <li><a target=”_blank” href="{{ row.socialMediaUrl }}"><i class="{{ row.socialMediaIcon }}"></i></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-area end --> 
+<!-- JS
+============================================ -->
+
+<!-- jQuery JS -->
+<script src="{{ siteUrl }}assets/js/vendor/jquery-1.12.0.min.js"></script>
+<!-- Popper JS -->
+<script src="{{ siteUrl }}assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="{{ siteUrl }}assets/js/bootstrap.min.js"></script>
+<!-- Plugins JS -->
+<script src="{{ siteUrl }}assets/js/plugins.js"></script>
+<!-- Ajax Mail -->
+<script src="{{ siteUrl }}assets/js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="{{ siteUrl }}assets/js/main.js"></script>
+<!-- Google Map Api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlZPf84AAVt8_FFN7rwQY5nPgB02SlTKs"></script>
+<!-- Google Map Activation -->
+<script src="{{ siteUrl }}assets/map/map.js"></script>
+<!-- SWIPE -->
+<script src="{{ siteUrl }}js/swipe.js"></script>
+<!-- SLICK -->
+<script src="{{ siteUrl }}js/slick.js"></script>
+<!-- Sctipt JS -->
+<script src="{{ siteUrl }}js/script.js"></script>
+
+
+</body>
+
+</html>

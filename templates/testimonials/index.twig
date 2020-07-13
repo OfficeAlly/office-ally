@@ -1,0 +1,130 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
+                <!-- breadcrumb-list start -->
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">{{ entry.subtitle }}</a></li>
+                    <!-- <li class="breadcrumb-item active">About Us</li> -->
+                </ul>
+                <!-- breadcrumb-list end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+ 
+{#<!-- Testimonials -->
+<section class="container main-content-wrap testimonials">
+    <div class="row">
+        {% for block in entry.testimonials.all() %}
+        {% if block.type == "testimonial" %}
+        <div class="col-md-6 col-lg-4 testimonial">
+            <img class="testimonial-photo" src="{{ block.testimonialImage.one().getUrl() }}" alt="{{ block.altField }}">
+            <h2>{{ block.testimonialName }}</h2>
+            <h4>{{ block.testimonialOccupation }}</h4>
+            <h5>{{ block.testimonialOrganization }}</h5>
+            <p>{{ block.testimonialDescription }}</p>  
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>#}
+    {# <!-- paginatoin-area start -->
+    <div class="paginatoin-area">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <p>Showing 10-13 of 13 item(s) </p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul class="pagination-box">
+                    {% if paginate.prevUrl %}
+                    <li><a class="Previous" href="{{ paginate.prevUrl }}">Previous</a>
+                    </li>
+                    {% endif %}
+
+                    {% for page, url in paginate.getPrevUrls(3) %}
+                    <li><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    <li class="active"><a href="#">{{ paginate.currentPage }}</a></li>
+
+                    {% for page, url in paginate.getNextUrls(3) %}
+                    <li><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    {% if paginate.nextUrl %}
+                    <li>
+                      <a class="Next" href="{{ paginate.nextUrl }}"> Next </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- paginatoin-area end -->#}
+{#</section>#}
+<!-- Testimonials End -->
+
+<!-- Testimonials -->
+<section class="container main-content-wrap testimonials">
+    {% paginate craft.entries.section('testimonials').limit(9) as testimonials %}
+    <div class="row testimonial-group">
+        {% for entry in testimonials %}
+        <div class="col-md-6 col-lg-4 testimonial">
+            {% for block in entry.testimonialImage.all() %}
+            {% if block.type == 'testimonialImage' %}
+            <img class="testimonial-photo" src="{{ block.testimonialImage.one().getUrl() }}" alt="{{ block.altField }}">
+            {% endif %}
+            {% endfor %}
+            <h2>{{ entry.testimonialName }}</h2>
+            <h4>{{ entry.testimonialOccupation }}</h4>
+            <h5>{{ entry.testimonialOrganization }}</h5>
+            <p>{{ entry.testimonialDescription }}</p>  
+        </div>
+        {% endfor %}
+    </div>
+    <!-- paginatoin-area start -->
+    <div class="paginatoin-area">
+        <div class="row">
+            <!-- <div class="col-lg-6 col-md-6">
+                <p>Showing 10-13 of 13 item(s) </p>
+            </div> -->
+            <div class="col-lg-6 col-md-6">
+                <ul class="pagination-box">
+                    {% if paginate.prevUrl %}
+                    <li><a class="Previous" href="{{ paginate.prevUrl }}">Previous</a>
+                    </li>
+                    {% endif %}
+
+                    {% for page, url in paginate.getPrevUrls(3) %}
+                    <li><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    <li class="active"><a href="#">{{ paginate.currentPage }}</a></li>
+
+                    {% for page, url in paginate.getNextUrls(3) %}
+                    <li><a href="{{ url }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    {% if paginate.nextUrl %}
+                    <li>
+                      <a class="Next" href="{{ paginate.nextUrl }}"> Next </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- paginatoin-area end -->
+</section>
+<!-- Testimonials End -->
+
+{#{% include '_includes/brands/brands' %}#}
+
+{% endblock %}

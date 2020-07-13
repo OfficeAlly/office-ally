@@ -1,0 +1,69 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
+                <!-- breadcrumb-list start -->
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">{{ entry.subtitle }}</li>
+                    <!-- <li class="breadcrumb-item active">Contact US</li> -->
+                </ul>
+                <!-- breadcrumb-list end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+
+<!-- main-content-wrap start -->
+<div class="main-content-wrap section-ptb contact-us-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info-wrapper">
+                    <h2 class="orange">{{ entry.contactTitle }}</h2>
+                    <p>{{ entry.contactDescription }}</p>
+                    <ul class="contact-info-list">
+                        <li> <strong>Address:</strong>  43 rue Conrad Valera, Gatineau QC CA</li>
+                        <li><strong>Phone:</strong>  +1 (819) 328-8629</li>
+                        <li><strong>Email:</strong> <a href="#"> rfwelsh@yahoo.com</a></li>
+                    </ul>
+                    {#<p>{{ entry.contactDetails }}</p>#}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form-warp">
+                    <form id="contact-form" action="mail.php" method="post">
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <input type="text" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-lg-10">
+                                <input type="email" name="email" placeholder="Mail Address">
+                            </div>
+                            <div class="col-lg-10">
+                                <textarea name="message" placeholder="Your Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-submit-btn">
+                            <button type="submit" class="submit-btn">Send Email</button>
+                            <p class="form-messege"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content-wrap end -->
+
+<!-- <div class="google-map-area">
+    <div id="map-inner" class="map"></div>
+</div> -->
+
+{% endblock %}

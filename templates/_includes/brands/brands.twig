@@ -1,0 +1,21 @@
+<!-- our-brand-area start -->
+{% for home in craft.entries.section('home').all() %}
+<div class="our-brand-area brands-logos">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="brands">
+                    {% for block in home.brandSlider.all() %}
+                    {% if block.type == "brandImage" %}
+                    <div class="single-brand">
+                        <a href="#"><img src="{{ block.brandImage.one().getUrl() }}" alt="{{ block.altField }}"></a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- our-brand-area end -->

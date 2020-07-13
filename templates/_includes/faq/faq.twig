@@ -1,0 +1,39 @@
+<!-- main-content-wrap start -->
+<div class="main-content-wrap section-ptb frequently-question-page">
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-12">
+                {#<div class="feequently-about-content">
+                    <h4 class="orange">{{ entry.faqTitle }}</h4>
+                </div>#}
+                <div class="about-contents faq-title">
+                    <h3>{{ entry.faqTitle }}</h3>
+                </div>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="faequently-area-inner">
+                    <div class="faequently-accordion">
+                        {% for row in entry.faqQuestions %}
+                        {% if loop.first %}
+                        <!--panel body start-->
+                        <h4 class="open">{{ row.faqQuestion }}</h4>
+                        <div class="faequently-description">
+                            <p>{{ row.faqAnswer}}</p>
+                        </div>
+                        {% else %}
+                        <!--panel body start-->
+                        <h4>{{ row.faqQuestion }}</h4>
+                        <div class="faequently-description">
+                            <p>{{ row.faqAnswer}}</p>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content-wrap end -->
