@@ -2,24 +2,9 @@
 
 {% block main %}
 
-<!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
-                <!-- breadcrumb-list start -->
-                <!-- <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Product Details</li>
-                </ul> -->
-                <!-- breadcrumb-list end -->
-                <p>{{ entry.subtitle }}</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb-area end -->
+{% for entry in craft.entries.section('productsHome').all() %}
+{% include '_includes/banner/banner' %}
+{% endfor %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb product-details-page">
@@ -36,7 +21,7 @@
                                 {% set counter = ( counter | default(0) ) + 1 %}
                                 <div role="tabpanel" class="tab-pane {% if loop.first %}active{% endif %} product-image-position" id="img-tab-{{ counter }}">
                                     <a href="{{ block.productImage.one().getUrl() }}" class="img-poppu">
-                                        <img src="{{ block.productImage.one().getUrl() }}" alt="{{ block.altField }}">
+                                        <img src="{{ block.productImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.altField }}">
                                     </a>
                                 </div>
                                 {% endif %}

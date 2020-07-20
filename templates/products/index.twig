@@ -2,24 +2,7 @@
 
 {% block main %}
 
-<!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
-                <!-- breadcrumb-list start -->
-                <!-- <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
-                </ul> -->
-                <!-- breadcrumb-list end -->
-                <p>{{ entry.subtitle }}</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb-area end -->
+{% include '_includes/banner/banner' %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap shop-page">
@@ -101,10 +84,10 @@
                                                 <div class="product-image">
                                                     {% for block in entry.productDisplayImages.all() %}
                                                     {% if block.type == "angleImage" %}
-                                                    <a class="img-bottom" href="{{ entry.url }}"><img src="{{ block.angleImage.one().getUrl() }}" alt="{{ block.angleAltField }}"></a>
+                                                    <a class="img-bottom" href="{{ entry.url }}"><img src="{{ block.angleImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.angleAltField }}"></a>
                                                     {% endif %}
                                                     {% if block.type == "frontImage" %}
-                                                    <a class="img-top" href="{{ entry.url }}"><img src="{{ block.frontImage.one().getUrl() }}" alt="{{ block.frontAltField }}"></a>
+                                                    <a class="img-top" href="{{ entry.url }}"><img src="{{ block.frontImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.frontAltField }}"></a>
                                                     {% endif %}
                                                     {% endfor %}
                                                 </div>

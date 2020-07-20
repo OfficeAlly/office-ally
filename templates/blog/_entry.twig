@@ -2,23 +2,9 @@
 
 {% block main %}
 
-<!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item">{{ entry.subtitle }}</li>
-                    <!-- <li class="breadcrumb-item active">About Us</li> -->
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb-area end -->
+{% for entry in craft.entries.section('blogHome').all() %}
+{% include '_includes/banner/banner' %}
+{% endfor %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap blog-page section-ptb">
@@ -62,7 +48,7 @@
                     <div class="blog-details-image">
                         {% for block in entry.blogImage.all() %}
                         {% if block.type == 'blogImage' %}
-                        <img src="{{ block.blogImage.one().getUrl() }}" alt="{{ block.altField }}">
+                        <img src="{{ block.blogImage.one().getUrl('eightSeventyFourNinety') }}" alt="{{ block.altField }}">
                         {% endif %}
                         {% endfor %}
                     </div>
@@ -75,8 +61,11 @@
                             
                             {% case 'blogImage' %}
                             <div class="blog-details-image">
-                            <img src="{{ block.blogImage.one().getUrl() }}" alt="{{ block.altField }}">
+                            <img src="{{ block.blogImage.one().getUrl('eightSeventyFourNinety') }}" alt="{{ block.altField }}">
                             </div>
+
+                            {% case 'blogVideo' %}
+                            {{ block.blogVideo | raw }}
                             {% endswitch %}
                     
                             {% endfor %}

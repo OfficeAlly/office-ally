@@ -2,23 +2,7 @@
 
 {% block main %}
 
-<!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item">{{ entry.subtitle }}</li>
-                    <!-- <li class="breadcrumb-item active">Contact US</li> -->
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb-area end -->
+{% include '_includes/banner/banner' %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb contact-us-page">
@@ -29,11 +13,11 @@
                     <h2 class="orange">{{ entry.contactTitle }}</h2>
                     <p>{{ entry.contactDescription }}</p>
                     <ul class="contact-info-list">
-                        <li> <strong>Address:</strong>  43 rue Conrad Valera, Gatineau QC CA</li>
-                        <li><strong>Phone:</strong>  +1 (819) 328-8629</li>
-                        <li><strong>Email:</strong> <a href="#"> rfwelsh@yahoo.com</a></li>
+                        <li> <strong>Address:</strong> {{ footer.address }}</li>
+                        <li><strong>Phone:</strong> <a href="tel:819-328-8629">{{ footer.phone }}</a></li>
+                        <li><strong>Email:</strong> {{ footer.eMail }}</li>
                     </ul>
-                    {#<p>{{ entry.contactDetails }}</p>#}
+                    {#{{ entry.contactDetails }}</p>#}
                 </div>
             </div>
             <div class="col-lg-6">

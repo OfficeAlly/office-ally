@@ -575,3 +575,17 @@ footer div.media-body h3 {
     }
 }
 
+@media (min-width: 1350px) {
+
+    footer form.newsletter > div {
+        width: 23.25em;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    footer form.newsletter > div {
+        width: 25.75em;
+    }
+}
+

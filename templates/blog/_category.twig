@@ -2,8 +2,9 @@
 
 {% block main %}
 
+{% for entry in craft.entries.section('blogHome').all() %}
 <!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
+<div class="section-ptb breadcrumb-area" style="background-image:url({{ entry.banner.one().getUrl() }})">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,6 +18,7 @@
     </div>
 </div>
 <!-- breadcrumb-area end -->
+{% endfor %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap blog-page section-ptb">
@@ -63,7 +65,7 @@
                             <div class="blog-image">
                                 {% for block in entry.blogImage.all() %}
                                 {% if block.type == 'blogImage' %}
-                                <a href="{{ entry.url }}"><img src="{{ block.blogImage.one().getUrl() }}" alt="{{ block.altField }}"></a>
+                                <a href="{{ entry.url }}"><img src="{{ block.blogImage.one().getUrl('eightSeventyFourNinety') }}" alt="{{ block.altField }}"></a>
                                 {% endif %}
                                 {% endfor %}
                             </div>

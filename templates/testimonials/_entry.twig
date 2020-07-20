@@ -2,42 +2,9 @@
 
 {% block main %}
 
-<!-- main-search start -->
-<div class="main-search-active">
-    <div class="sidebar-search-icon">
-        <button class="search-close"><span class="icon-close"></span></button>
-    </div>
-    <div class="sidebar-search-input">
-        <form>
-            <div class="form-search">
-                <input id="search" class="input-text" value="" placeholder="Search entire store here ..." type="search">
-                <button class="search-btn" type="button">
-                    <i class="icon-magnifier"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-<!-- main-search start -->
-
-
-<!-- breadcrumb-area start -->
-<div class="breadcrumb-area section-ptb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="index.html">{{ entry.subtitle }}</a></li>
-                    <!-- <li class="breadcrumb-item active">About Us</li> -->
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb-area end -->
+{% for entry in craft.entries.section('testimonials').all() %}
+{% include '_includes/banner/banner' %}
+{% endfor %}
  
 <!-- Testimonials -->
 <section class="container main-content-wrap testimonials">
