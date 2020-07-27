@@ -5,9 +5,10 @@
 {% set query = craft.app.request.getParam('q') %}
 {% set entries = craft.entries.search(query).section('blog').orderBy('score').limit(20) %}
 
-{% for entry in craft.entries.section('blogHome').all() %}
 <!-- breadcrumb-area start -->
+{% for entry in craft.entries.section('blogHome').all() %}
 <div class="section-ptb breadcrumb-area" style="background-image:url({{ entry.banner.one().getUrl() }})">
+{% endfor %}
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,7 +18,6 @@
     </div>
 </div>
 <!-- breadcrumb-area end -->
-{% endfor %}
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap blog-page section-ptb">

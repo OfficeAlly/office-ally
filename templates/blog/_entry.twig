@@ -2,9 +2,25 @@
 
 {% block main %}
 
+<!-- breadcrumb-area start -->
 {% for entry in craft.entries.section('blogHome').all() %}
-{% include '_includes/banner/banner' %}
+<div class="section-ptb breadcrumb-area" style="background-image:url({{ entry.banner.one().getUrl() }})">
 {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="breadcrumb-title">{{ entry.title }}</h2>
+                <!-- breadcrumb-list start -->
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">{{ entry.subtitle }}</a></li>
+                    <!-- <li class="breadcrumb-item active">About Us</li> -->
+                </ul>
+                <!-- breadcrumb-list end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap blog-page section-ptb">
@@ -17,10 +33,7 @@
                     <div class="shop-sidebar mb--30">
                         <h4 class="title">Search</h4>
                         <div class="search-post">
-                            <form  action="#">
-                                <input type="text" placeholder="Enter Keywords...">
-                                <button class=" btn-search" type="submit"><i class="ion-ios-search-strong"></i></button>
-                            </form>
+                            {% include 'search/_search-form' %}
                         </div>
                     </div>
                     <!-- shop-sidebar end -->
