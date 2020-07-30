@@ -149,11 +149,11 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 
 div.home-banner div.slider-text-info {
     text-align: left;
-    padding-top: 110px;
+    padding-top: 2.75em;
 }
 
 div.home-banner div.slick-list {
-    height: 25.75em;
+    height: 21.75em;
 }
 
 div.home-banner div.slider-inner-image {
@@ -227,6 +227,10 @@ h2.white {
 }
 
 .brands-logos {
+    padding: 50px 30px;
+}
+
+.top-brands-logos {
     padding: 0 30px 50px;
 }
 
@@ -538,7 +542,7 @@ footer div.media-body h3 {
     }
 
     div.home-banner div.slick-list {
-        height: 25em;
+        height: 21.25em;
     }
 
     footer form.newsletter > div {
@@ -552,12 +556,12 @@ footer div.media-body h3 {
         width: 12em;
     }
 
-    div.home-banner div.slick-list {
-        height: 26em;
+    div.home-banner div.slider-text-info {
+        padding-top: 2.75em;
     }
 
-    div.home-banner div.slider-text-info {
-        padding-left: 8em;
+    div.home-banner div.slick-list {
+        height: 21.25em;
     }
 
     div.swipe-wrap > div {
@@ -598,8 +602,12 @@ footer div.media-body h3 {
         margin-top: 0.5em;
     }
 
+    div.home-banner div.slider-text-info {
+        padding-top: 3.75em;
+    }
+
     div.home-banner div.slick-list {
-        height: 32.75em;
+        height: 31.75em;
     }
 
     div.home-banner div.slider-text-info {
