@@ -159,7 +159,7 @@ div.home-banner div.slick-list {
 div.home-banner div.slider-inner-image {
     max-width: 30em;
     height: auto;
-    padding-top: 2em;
+    padding-top: 0.25em;
 }
 
 div.featured-background {
@@ -607,7 +607,7 @@ footer div.media-body h3 {
     }
 
     div.home-banner div.slick-list {
-        height: 28.75em;
+        height: 30.75em;
     }
 
     div.home-banner div.slider-text-info {
