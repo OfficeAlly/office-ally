@@ -1,6 +1,6 @@
 <!-- testimonial-area start -->
 {% for home in craft.entries.section('home').all() %}
-<div class="testimonial-area testimonial-bg overlay section-ptb">
+<div class="testimonial-area overlay section-ptb" style="background-image: url({{ entry.sliderTestimonialImage.one().getUrl() }})">
     <div class="container">
         <div class="row">
             <h2 class="client-title">{{ entry.testimonialTitle }}</h2>

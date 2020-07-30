@@ -12,6 +12,15 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+}
+
 main {
     flex: 1;
 }
@@ -137,6 +146,37 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 }
 
 /* HOME */
+
+div.home-banner div.slick-list {
+    height: 30em;
+}
+
+div.home-banner div.slider-text-info {
+    text-align: left;
+    padding-top: 110px;
+    padding-left: 10em;
+}
+
+div.home-banner div.slider-inner-image {
+    max-width: 30em;
+    height: auto;
+    padding-top: 2em;
+}
+
+div.featured-background {
+    height: 8em;
+    border: 1px solid cadetblue;
+    background-color: #fffcf8;
+    padding: 2em;
+}
+
+div.featured-background:hover {
+    background-color: #fbf6ef;
+}
+
+div.featured-background a {
+    display: block;
+}
 
 section.boxes {
     /*background-color: #74849b;*/
@@ -367,11 +407,51 @@ div.testimonial-group {
     margin-bottom: 4.25em;
 }
 
+div.testimonial-pagination {
+    border-bottom: none;
+}
+
 /* BLOG */
 
 .blog-date-categori ul li i {
     font-size: 14px;
     margin-right: 5px;
+}
+
+div.blog-details-wrapper {
+    max-width: 870px;
+}
+
+h1.blog-h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+div.responsive-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+div.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTACT PAGE */
+
+form.contact-form label {
+    display: none;
+    visibility: hidden;
+}
+
+form.contact-form div.phone {
+    display: none;
+    visibility: hidden;
 }
 
 /* FOOTER */
@@ -432,6 +512,7 @@ footer form.newsletter > div {
 
 footer button.btn {
     padding: .375rem .75rem;
+    margin-bottom: 5px;
 }
 
 footer div.footer-title h3 {

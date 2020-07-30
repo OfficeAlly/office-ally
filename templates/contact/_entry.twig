@@ -22,6 +22,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="contact-form-warp">
+                    {#
                     <form id="contact-form" action="mail.php" method="post">
                         <div class="row">
                             <div class="col-lg-10">
@@ -37,6 +38,56 @@
                         <div class="contact-submit-btn">
                             <button type="submit" class="submit-btn">Send Email</button>
                             <p class="form-messege"></p>
+                        </div>
+                    </form>#}
+
+                    {% macro errorList(errors) %}
+                        {% if errors %}
+                            <ul class="errors">
+                                {% for error in errors %}
+                                    <li class="alert alert-danger">{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endmacro %}
+
+                    {% from _self import errorList %}
+
+                    <form method="post" action="" class="contact-form" accept-charset="UTF-8">
+                        {{ csrfInput() }}
+                        <input type="hidden" name="action" value="contact-form/send">
+                        {{ redirectInput('contact/thanks') }}
+
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <h3><label for="from-name">Your Name</label></h3>
+                                <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}" title="Name (Required)" placeholder="Your Name">
+                                {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+                            </div>
+                            <div class="col-lg-10">
+                                <h3><label for="from-email">Your Email</label></h3>
+                                <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}" title="Email (Required)" placeholder="Email Address">
+                                {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+                            </div>
+                            <div class="col-lg-10">
+                                <h3><label for="subject">Subject</label></h3>
+                                <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}" title="Subject" placeholder="Subject">
+                                {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+                            </div>
+                            <div class="col-lg-10 phone">
+                                <div class="honeypot">
+                                    <h3><label class="honeypot" for="phone">Phone</label></h3>
+                                    <input type="text" id="phone" name="phone" class="honeypot" placeholder="Your Phone"></input>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <h3><label for="message">Message</label></h3>
+                                <textarea rows="10" cols="40" id="message" name="message" placeholder="Your Message">{{ message.message ?? '' }}</textarea>
+                                {{ message is defined and message ? errorList(message.getErrors('message')) }}
+                            </div>
+                        </div>
+                        <div class="contact-submit-btn">
+                            <button type="submit" class="submit-btn">Send Email</button>
                         </div>
                     </form>
                 </div>

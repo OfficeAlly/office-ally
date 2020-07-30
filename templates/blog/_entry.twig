@@ -12,7 +12,7 @@
                 <h2 class="breadcrumb-title">{{ entry.title }}</h2>
                 <!-- breadcrumb-list start -->
                 <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="index.html">{{ entry.subtitle }}</a></li>
+                    <li class="breadcrumb-item">{{ entry.subtitle }}</li>
                     <!-- <li class="breadcrumb-item active">About Us</li> -->
                 </ul>
                 <!-- breadcrumb-list end -->
@@ -58,6 +58,19 @@
             <div class="col-lg-9 order-lg-2 order-1">
                 <!-- blog-details-wrapper start -->
                 <div class="blog-details-wrapper">
+                    <h1 class="breadcrumb-title orange blog-h1">{{ entry.title }}</h1>
+                    <div class="blog-date-categori">
+                        <ul>
+                            {% set officeAllyUsers = craft.users().admin() %}
+                            {% set users = officeAllyUsers.all() %}
+                            {% for user in users %}
+                            <li><i class="ion-ios-person"></i>{{ user.name }}</li>
+                            {% endfor %}
+                            {% set category = entry.blogCategories.one() %}
+                            <li><a href="{{ category.url }}"><i class="ion-ios-pricetags"></i>{{ category.title }}</a></li>
+                            <li><i class="ion-ios-clock"></i>{{ entry.postDate | date('M d, Y') }}</li>
+                        </ul>
+                    </div>
                     <div class="blog-details-image">
                         {% for block in entry.blogImage.all() %}
                         {% if block.type == 'blogImage' %}
@@ -78,7 +91,9 @@
                             </div>
 
                             {% case 'blogVideo' %}
-                            {{ block.blogVideo | raw }}
+                            <div class="responsive-video">
+                                {{ block.blogVideo | raw }}
+                            </div>
                             {% endswitch %}
                     
                             {% endfor %}

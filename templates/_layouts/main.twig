@@ -145,7 +145,7 @@
                 <div class="col-md-4 footer-product">
                     <div class="footer-title">
                         <h3 class="orange newsletter">Be the first to know about our new products</h3>
-                    </div>
+                    </div>{#
                     <form id="newsletter" class="form-inline newsletter" role="form">
                         <div>
                             <label class="sr-only" for="exampleInputName">First Name</label>
@@ -154,6 +154,38 @@
                             <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email Address">
                         </div>
                         <button type="submit" class="btn btn-default btn-submit"><i class="icon-paper-plane"></i></button>
+                    </form>#}
+
+                    <form class="form-inline newsletter" action="" method="post">
+                      {{ csrfInput() }}
+                      <input type="hidden" name="action" value="mailchimp-subscribe/audience/subscribe">
+                      <input type="hidden" name="redirect" value="{{ 'newsletter/thanks' | hash }}">
+                      
+                      {% if mailchimpSubscribe is defined %}
+                        {% if (not mailchimpSubscribe.success) and (mailchimpSubscribe.errorCode!='1000') %}
+                          <p>An error occured. Please try again.</p>
+                        {% endif %}
+                      {% endif %}
+                      
+                      <div>
+                        <div class="field-line">
+                          <label class="sr-only">First name:</label>
+                          <input class="form-control" type="text" name="merge_fields[FNAME]" value="{% if (mailchimpSubscribe is defined) and (not mailchimpSubscribe.success) %}{{ mailchimpSubscribe.values.vars.FNAME }}{% endif %}" placeholder="First Name" required/>
+                        </div>
+
+                        {#
+                        <div class="field-line">
+                          <label class="sr-only">Last name:</label>
+                          <input type="text" name="mcvars[LNAME]" value="{% if (mailchimpSubscribe is defined) and (not mailchimpSubscribe.success) %}{{ mailchimpSubscribe.values.vars.LNAME }}{% endif %}"/>
+                        </div> #}
+
+                        <div class="field-line">
+                          <label class="sr-only"{% if (mailchimpSubscribe is defined) and (mailchimpSubscribe.errorCode=='1000') %} class="error"{% endif %}>Email:</label>
+                          <input class="form-control" type="text" name="email" value="{% if (mailchimpSubscribe is defined) and (not mailchimpSubscribe.success) %}{{ mailchimpSubscribe.values.email }}{% endif %}" placeholder="E-mail Address" required/>
+                        </div>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-default btn-submit"><i class="icon-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -196,8 +228,6 @@
 <script src="{{ siteUrl }}assets/js/main.js"></script>
 <!-- Google Map Api -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlZPf84AAVt8_FFN7rwQY5nPgB02SlTKs"></script>
-<!-- Google Map Activation -->
-<script src="{{ siteUrl }}assets/map/map.js"></script>
 <!-- SWIPE -->
 <script src="{{ siteUrl }}js/swipe.js"></script>
 <!-- SLICK -->

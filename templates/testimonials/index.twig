@@ -63,7 +63,7 @@
         <div class="col-md-6 col-lg-4 testimonial">
             {% for block in entry.testimonialImage.all() %}
             {% if block.type == 'testimonialImage' %}
-            <img class="testimonial-photo" src="{{ block.testimonialImage.one().getUrl() }}" alt="{{ block.altField }}">
+            <img class="testimonial-photo" src="{{ block.testimonialImage.one().getUrl('fiveSeventySixFiveSeventySix') }}" alt="{{ block.altField }}">
             {% endif %}
             {% endfor %}
             <h2>{{ entry.testimonialName }}</h2>
@@ -74,7 +74,7 @@
         {% endfor %}
     </div>
     <!-- paginatoin-area start -->
-    <div class="paginatoin-area">
+    <div class="paginatoin-area testimonial-pagination">
         <div class="row">
             <!-- <div class="col-lg-6 col-md-6">
                 <p>Showing 10-13 of 13 item(s) </p>

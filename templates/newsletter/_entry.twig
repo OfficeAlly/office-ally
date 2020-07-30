@@ -1,0 +1,32 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+{% include '_includes/banner/banner' %}
+
+<!-- main-content-wrap start -->
+<div class="main-content-wrap section-ptb contact-us-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info-wrapper">
+                    <ul class="contact-info-list">
+                        <li> <strong>Address:</strong> {{ footer.address }}</li>
+                        <li><strong>Phone:</strong> <a href="tel:819-328-8629">{{ footer.phone }}</a></li>
+                        <li><strong>Email:</strong> {{ footer.eMail }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <p>{{ entry.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content-wrap end -->
+
+<!-- <div class="google-map-area">
+    <div id="map-inner" class="map"></div>
+</div> -->
+
+{% endblock %}

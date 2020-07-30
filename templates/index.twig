@@ -2,51 +2,64 @@
 
 {% block main %}
 
-<!-- testimonial-area start -->
-<div class="overlay section-ptb" style="background-image:url({{ entry.banner.one().getUrl() }})">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="testimonial-inner text-center">
-                    <div class="test-cont">
-                        <!-- <img src="assets/images/icon/2.png" alt=""> -->
-                        <h2 class="white">{{ entry.title }}</h2>
+<!-- Hero Slider Start -->
+<div class="home-banner hero-slider hero-slider-one">
+    <!-- Single Slide Start -->
+    {% for block in entry.homeSlider.all() %}
+    {% if block.type == "homeSlider" %}
+    <div class="single-slide" style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
+        <!-- Hero Content One Start -->
+        <div class="hero-content-one container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8"> 
+                    <div class="slider-text-info">
+                        <h3 class="">{{ block.smallTitle }}</h3>
+                        <h1>{{ block.bigTitle }}</h1>
+                        <p>{{ block.subTitle }}</p>
+                        <a href="/products" class="btn slider-btn uppercase"><span>SHOP NOW</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6"> 
+                    <div class="slider-inner-image">
+                        <img src="{{ block.sliderImage.one().getUrl() }}" alt="{{ block.altField }}">
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Hero Content One End -->
     </div>
+    <!-- Single Slide End -->
+    {% endif %}
+    {% endfor %}
 </div>
-<!-- testimonial-area end -->
+<!-- Hero Section End -->
 
-<div class="container brands-logos">
-    <div class="row">
-        {% for block in entry.brands.all() %}
-        {% if block.type == "brandImage" %}
-        <div class="col-sm-33 col-md-20">
-            <img class="brand-image" src="{{ block.brandImage.one().getUrl() }}" alt="{{ block.altField }}">
+<!-- Single Slide End -->
+<section style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
+    <div class="container brands-logos">
+        <div class="row">
+            {% for block in entry.brands.all() %}
+            {% if block.type == "brandImage" %}
+            <div class="col-sm-33 col-md-20">
+                <img class="brand-image" src="{{ block.brandImage.one().getUrl() }}" alt="{{ block.altField }}">
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
-</div>
+</section>
 
 <!-- banner-area start -->
-<div class="banner-area">
+<section style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
     <div class="container">
         <div class="row">
             {% for block in entry.featuredSection.all() %}
             {% if block.type == "featuredSection" %}
             <div class="col-lg-4 col-md-4">
                 <!-- single-banner start -->
-                <div class="single-banner">
-                    <div class="banner-bg">
-                        <a href="shop.html"><img src="{{ block.featuredImage.one().getUrl() }}" alt="{{ block.altField }}"></a>
-                    </div>
-                    <div class="banner-contet">
-                        <h3>{{ block.featuredTitle }}</h3>
-                        <a href="{{ block.featuredUrl }}" class="btn-3">{{ block.featuredDescription }}</a>
-                    </div>
+                <div class="featured-background">
+                    <a href="{{ block.featuredUrl }}"><h3 class="orange">{{ block.featuredTitle }}</h3></a>
+                    <a href="{{ block.featuredUrl }}" class="btn-3">{{ block.featuredDescription }}</a>
                 </div>
                 <!-- single-banner end -->
             </div>
@@ -54,7 +67,7 @@
             {% endfor %}
         </div>
     </div>
-</div>
+</section>
 <!-- banner-area end -->
 
 <!-- product-area start -->
@@ -80,15 +93,15 @@
                         <div class="product-image">
                             {% for block in entry.productDisplayImages.all() %}
                             {% if block.type == "angleImage" %}
-                            <a class="img-bottom" href="{{ entry.url }}"><img src="{{ block.angleImage.one().getUrl() }}" alt="{{ block.angleAltField }}"></a>
+                            <a class="img-bottom" href="{{ entry.url }}"><img src="{{ block.angleImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.angleAltField }}"></a>
                             {% endif %}
                             {% if block.type == "frontImage" %}
-                            <a class="img-top" href="{{ entry.url }}"><img src="{{ block.frontImage.one().getUrl() }}" alt="{{ block.frontAltField }}"></a>
+                            <a class="img-top" href="{{ entry.url }}"><img src="{{ block.frontImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.frontAltField }}"></a>
                             {% endif %}
                             {% endfor %}
                         </div>
                         <div class="product-content">
-                            <h3><a href="product-details.html">{{ entry.title }}</a></h3>
+                            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
                             <div class="price-box">
                                 <!-- <span class="old-price">140.00</span> -->
                                 <span class="new-price">${{ entry.productPrice }}</span>
