@@ -147,14 +147,13 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 
 /* HOME */
 
-div.home-banner div.slick-list {
-    height: 30em;
-}
-
 div.home-banner div.slider-text-info {
     text-align: left;
     padding-top: 110px;
-    padding-left: 10em;
+}
+
+div.home-banner div.slick-list {
+    height: 20em;
 }
 
 div.home-banner div.slider-inner-image {
@@ -538,6 +537,10 @@ footer div.media-body h3 {
         max-width: 740px;
     }
 
+    div.home-banner div.slick-list {
+        height: 22em;
+    }
+
     footer form.newsletter > div {
         width: 22.75em;
     }
@@ -547,6 +550,14 @@ footer div.media-body h3 {
 
     img.orange-chair {
         width: 12em;
+    }
+
+    div.home-banner div.slick-list {
+        height: 25em;
+    }
+
+    div.home-banner div.slider-text-info {
+        padding-left: 8em;
     }
 
     div.swipe-wrap > div {
@@ -585,6 +596,14 @@ footer div.media-body h3 {
         border-left: 5px dotted #e97730;
         border-bottom: 5px dotted #e97730;
         margin-top: 0.5em;
+    }
+
+    div.home-banner div.slick-list {
+        height: 30em;
+    }
+
+    div.home-banner div.slider-text-info {
+        padding-left: 6.5em;
     }
 
     .col-md-20 {
@@ -629,6 +648,10 @@ footer div.media-body h3 {
         border-left: 5px dotted #e97730;
         border-bottom: 5px dotted #e97730;
         margin-top: 0.75em;
+    }
+
+    div.home-banner div.slider-text-info {
+        padding-left: 10em;
     }
 
     nav.navbar-expand-lg div.main-menu-area ul.navbar-nav li a {
