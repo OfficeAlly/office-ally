@@ -153,7 +153,7 @@ div.home-banner div.slider-text-info {
 }
 
 div.home-banner div.slick-list {
-    height: 20em;
+    height: 25.75em;
 }
 
 div.home-banner div.slider-inner-image {
@@ -227,7 +227,7 @@ h2.white {
 }
 
 .brands-logos {
-    padding: 50px 30px;
+    padding: 0 30px 50px;
 }
 
 .lg-banner-info h2 {
@@ -538,7 +538,7 @@ footer div.media-body h3 {
     }
 
     div.home-banner div.slick-list {
-        height: 22em;
+        height: 25em;
     }
 
     footer form.newsletter > div {
@@ -553,7 +553,7 @@ footer div.media-body h3 {
     }
 
     div.home-banner div.slick-list {
-        height: 25em;
+        height: 26em;
     }
 
     div.home-banner div.slider-text-info {
@@ -599,7 +599,7 @@ footer div.media-body h3 {
     }
 
     div.home-banner div.slick-list {
-        height: 30em;
+        height: 32.75em;
     }
 
     div.home-banner div.slider-text-info {
