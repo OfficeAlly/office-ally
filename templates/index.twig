@@ -1,5 +1,45 @@
 {% extends "_layouts/main" %}
+{% block navigation %}
 
+<!-- header-area start -->
+<div class="header-area">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})";>
+        <div class="container main-menu-area">
+            <a class="logo navbar-brand" href="/"><img src="{{ siteUrl }}images/office-ally-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/we-buy">We Buy!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- header-area end -->
+
+{% endblock %}
 {% block main %}
 
 <!-- Hero Slider Start -->
@@ -7,21 +47,20 @@
     <!-- Single Slide Start -->
     {% for block in entry.homeSlider.all() %}
     {% if block.type == "homeSlider" %}
-    <div class="single-slide" style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
+    <div class="single-slide" style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})">
         <!-- Hero Content One Start -->
         <div class="hero-content-one container">
             <div class="row">
                 <div class="col-lg-6 col-md-9 col-sm-12"> 
                     <div class="slider-text-info">
-                        <h3 class="">{{ block.smallTitle }}</h3>
-                        <h1>{{ block.bigTitle }}</h1>
-                        <p>{{ block.subTitle }}</p>
-                        <a href="/products" class="btn slider-btn uppercase"><span>SHOP NOW</span></a>
+                        <h1 class="orange">{{ block.sliderTitle }}</h1>
+                        {{ block.subTitle }}
+                        <a href="{{ block.buttonLink }}" class="btn slider-btn uppercase"><span>{{ block.buttonName }}</span></a>
                     </div>
                 </div>
                 <div class="col-lg-6"> 
                     <div class="slider-inner-image">
-                        <img src="{{ block.sliderImage.one().getUrl() }}" alt="{{ block.altField }}">
+                        <img src="{{ block.sliderImage.one().getUrl('fiveOFourFiveOFour') }}" alt="{{ block.altField }}">
                     </div>
                 </div>
             </div>
@@ -35,8 +74,8 @@
 <!-- Hero Section End -->
 
 <!-- Single Slide End -->
-<section style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
-    <div class="container brands-logos">
+<section style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})">
+    <div class="container top-brands-logos">
         <div class="row">
             {% for block in entry.brands.all() %}
             {% if block.type == "brandImage" %}
@@ -50,7 +89,7 @@
 </section>
 
 <!-- banner-area start -->
-<section style="background-image: url(assets/images/slider/slide-bg-1.jpg)">
+<section style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})">
     <div class="container">
         <div class="row">
             {% for block in entry.featuredSection.all() %}

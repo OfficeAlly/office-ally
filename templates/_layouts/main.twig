@@ -36,43 +36,9 @@
 <body>
 <!-- Main Wrapper Start -->
 <main class="main-wrapper">
-<!-- header-area start -->
-<div class="header-area">
-    <nav class="navbar navbar-expand-lg navbar-light nav-background">
-        <div class="container main-menu-area">
-            <a class="logo navbar-brand" href="/"><img src="{{ siteUrl }}images/office-ally-logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/we-buy">We Buy!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- header-area end -->
+{% block navigation %}
+{% include '_includes/navigation/navigation' %}
+{% endblock %}
 {% block main %}
 
 {% endblock %}
