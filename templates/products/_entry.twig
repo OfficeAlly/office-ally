@@ -21,7 +21,7 @@
                                 {% set counter = ( counter | default(0) ) + 1 %}
                                 <div role="tabpanel" class="tab-pane {% if loop.first %}active{% endif %} product-image-position" id="img-tab-{{ counter }}">
                                     <a href="{{ block.productImage.one().getUrl() }}" class="img-poppu">
-                                        <img src="{{ block.productImage.one().getUrl('fourThirtyTwoFiveSeventySix') }}" alt="{{ block.altField }}">
+                                        <img src="{{ block.productImage.one().getUrl() }}" alt="{{ block.altField }}">
                                     </a>
                                 </div>
                                 {% endif %}

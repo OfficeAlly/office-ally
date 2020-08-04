@@ -43,22 +43,25 @@
 {% block main %}
 
 <!-- Hero Slider Start -->
-<div class="home-banner hero-slider hero-slider-one">
+<div class="home-banner hero-slider hero-slider-one" style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})">
     <!-- Single Slide Start -->
     {% for block in entry.homeSlider.all() %}
     {% if block.type == "homeSlider" %}
-    <div class="single-slide" style="background-image: url({{ entry.backgroundTexture.one().getUrl() }})">
+    <div class="single-slide">
         <!-- Hero Content One Start -->
         <div class="hero-content-one container">
             <div class="row">
-                <div class="col-lg-6 col-md-9 col-sm-12"> 
+                <div class="col-sm-12 col-lg-6 d-block d-md-none">
+                    <img src="{{ block.sliderImage.one().getUrl('fiveOFourFiveOFour') }}" alt="{{ block.altField }}">
+                </div>
+                <div class="col-lg-6 col-md-7 col-sm-12"> 
                     <div class="slider-text-info">
                         <h1 class="orange">{{ block.sliderTitle }}</h1>
                         {{ block.subTitle }}
                         <a href="{{ block.buttonLink }}" class="btn slider-btn uppercase"><span>{{ block.buttonName }}</span></a>
                     </div>
                 </div>
-                <div class="col-lg-6"> 
+                <div class="col-lg-6 col-md-5 col-sm-12"> 
                     <div class="slider-inner-image">
                         <img src="{{ block.sliderImage.one().getUrl('fiveOFourFiveOFour') }}" alt="{{ block.altField }}">
                     </div>

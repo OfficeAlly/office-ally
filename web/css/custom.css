@@ -367,6 +367,11 @@ div.single-product-wrap div.price-box span {
     font-size: 0.95em;
 }
 
+div.portfolio-full-image img {
+    width: 100%;
+    max-width: 498px;
+}
+
 /* WE BUY */
 
 div.about-area h3 {
@@ -596,6 +601,10 @@ footer div.media-body h3 {
         width: 9.75em;
         margin: 0 0.75em 0.5em 0;
         width: 7.25em;
+    }
+
+        .hero-slider-one .slider-inner-image {
+        display: block;
     }
 
 }

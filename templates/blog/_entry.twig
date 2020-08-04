@@ -1,5 +1,36 @@
 {% extends "_layouts/main" %}
 
+{% block social %}
+
+{# Pinterest #}
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="{{ entry.postDate | date('M d, Y') }}" />
+<meta property="article:author" content="{{ entry.author.fullName }}" />
+
+{# Facebook #}
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ entry.url }}">
+<meta property="og:description" content="{{ entry.blogSummary }}">
+<meta property="og:site_name" content="{{ siteName }}" />
+<meta property="og:title" content="{{ entry.title }}"/>
+
+<!-- Setup your image transform to match Facebook's image guidelines. -->
+<meta property="og:image" content="{% for block in entry.blogImage.all() %}{% if block.type == 'blogImage' %}{% set imageFeatured = block.blogImage.one() %}{% if imageFeatured %}http:{{ imageFeatured.getUrl('thumbFacebook') }}{% endif %}{% endif %}{% endfor %}"/>
+
+{# Twitter #}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SkylightDesigns">
+<meta name="twitter:creator" content="@SkylightDesigns">
+<meta name="twitter:description" content="{{ entry.blogSummary }}">
+<meta name="twitter:title" content="{{ entry.title }}">
+
+<!-- Setup your image transform to match Twitter's image guidelines. -->
+<meta name="twitter:image" content="{% for block in entry.blogImage.all() %}{% if block.type == 'blogImage' %}{% set imageFeatured = block.blogImage.one() %}{% if imageFeatured %}http:{{ imageFeatured.getUrl('thumbTwitter') }}{% endif %}{% endif %}{% endfor %}">
+
+{% endblock %}
+
 {% block main %}
 
 <!-- breadcrumb-area start -->
