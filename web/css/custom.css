@@ -277,6 +277,10 @@ div.hero-slider-one div.slider-text-info h1 {
 
 /* PRODUCTS */
 
+p.capitalize {
+    text-transform: capitalize;
+}
+
 div.product_details_info > h2 {
     color: #e97730;
 }
@@ -295,13 +299,25 @@ div.swipe img {
     width: 26em;
 }
 
+ul.pro_dtl_prize {
+    margin-top: 0.75em;
+}
+
+ul.pro_dtl_prize li {
+    font-size: 1.75em;
+}
+
 span.currency {
     font-size: 16px;
 }
 
-div.product-details-tab .nav li.active {
-    color: #e97730;
+h2.title_3 {
+    font-size: 1.25em;
 }
+
+/*div.product-details-tab .nav li.active {
+    color: #e97730;
+}*/
 
 div.product-details-tab ul.nav {
     justify-content: flex-start;
@@ -388,6 +404,11 @@ div.frequently-question-page div.faq-title h3 {
     font-size: 1.5em;
 }
 
+div.faequently-accordion h4 {
+    text-transform: initial;
+    font-size: 1.125em;
+}
+
 /* ABOUT */
 
 div.margin-bottom-double {
@@ -466,6 +487,13 @@ div.responsive-video iframe {
 }
 
 /* CONTACT PAGE */
+
+div.contact-orange > h1,
+div.contact-orange > h2,
+div.contact-orange > h3,
+div.contact-orange > h4 {
+    color: #e97730;
+}
 
 form.contact-form label {
     display: none;

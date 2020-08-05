@@ -69,7 +69,11 @@
                                 <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
                                 <div class="blog-date-categori">
                                     <ul>
-                                        <li><i class="ion-ios-person"></i>Admin</li>
+                                        {% set officeAllyUsers = craft.users().admin() %}
+                                        {% set users = officeAllyUsers.all() %}
+                                        {% for user in users %}
+                                        <li><i class="ion-ios-person"></i>{{ user.name }}</li>
+                                        {% endfor %}
                                         {% set category = entry.blogCategories.one() %}
                                         <li><a href="{{ category.url }}"><i class="ion-ios-pricetags"></i>{{ category.title }}</a></li>
                                         <li><i class="ion-ios-clock"></i>{{ entry.postDate | date('M d, Y') }}</li>
