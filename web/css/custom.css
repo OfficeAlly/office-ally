@@ -174,10 +174,11 @@ div.breadcrumb-area {
 }
 
 div.featured-background {
-    height: 8em;
-    border: 1px solid cadetblue;
-    background-color: #fffcf8;
+    height: auto;
+    border: 1px dashed cadetblue;
+    background-color: rgba(255,252,248,0.75);
     padding: 2em;
+    margin-top: 0.5em;
 }
 
 div.featured-background:hover {
@@ -241,10 +242,6 @@ h2.white {
     padding: 50px 30px;
 }
 
-.top-brands-logos {
-    padding: 0 30px 50px;
-}
-
 .lg-banner-info h2 {
     font-size: 2.25em;
 }
@@ -273,6 +270,10 @@ img.brand-image {
 
 div.hero-slider-one div.slider-text-info h1 {
     text-transform: none;
+}
+
+div.featured-background h3 {
+    font-weight: 500;
 }
 
 /* PRODUCTS */
@@ -691,6 +692,14 @@ footer div.media-body h3 {
 
 @media (min-width: 1200px) {
 
+    .col-lg-20 {
+        max-width: 20%;
+    }
+
+    .top-brands-logos {
+        padding: 5px 30px 20px;
+    }
+
     h1.title {
         font-size: 3.5em;
         border-left: 5px dotted #e97730;
@@ -713,6 +722,10 @@ footer div.media-body h3 {
 
     .container {
         max-width: 1520px;
+    }
+
+    div.featured-background {
+        margin-top: 0;
     }
 
     footer form.newsletter > div {

@@ -106,7 +106,7 @@
                     </div>
                     <div class="col-lg-10">
                         <h3><label for="subject">Product</label></h3>
-                        <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}" title="Subject" placeholder="Product or Service">
+                        <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}" title="Subject" placeholder="Product Purchased">
                         {{ message is defined and message ? errorList(message.getErrors('subject')) }}
                     </div>
                     <div class="col-lg-10 phone">
@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-lg-10">
                         <h3><label for="message">Testimonial</label></h3>
-                        <textarea rows="10" cols="40" id="message" name="message" placeholder="Your Testimonial">{{ message.message ?? '' }}</textarea>
+                        <textarea rows="10" cols="40" id="message" name="message" placeholder="Share Your Thoughts and Upload a Photo of Your Chair">{{ message.message ?? '' }}</textarea>
                         {{ message is defined and message ? errorList(message.getErrors('message')) }}
                     </div>
                     <div class="col-lg-10">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="contact-submit-btn">
-                    <button type="submit" class="submit-btn">Submit Review</button>
+                    <button type="submit" class="submit-btn">Send Testimonial</button>
                 </div>
             </form>
         </div>

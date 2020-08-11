@@ -82,7 +82,7 @@
         <div class="row">
             {% for block in entry.brands.all() %}
             {% if block.type == "brandImage" %}
-            <div class="col-sm-33 col-md-20">
+            <div class="col-6 col-md-4 col-lg-20">
                 <img class="brand-image" src="{{ block.brandImage.one().getUrl() }}" alt="{{ block.altField }}">
             </div>
             {% endif %}
