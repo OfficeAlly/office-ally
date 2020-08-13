@@ -92,17 +92,44 @@
                     <ul role="tablist" class="mb--50 nav">
                         <!-- <li class="active" role="presentation">Description</li> -->
                         {% if entry.productVideo %}
-                        <li class="active" role="presentation">
-                            <a data-toggle="tab" role="tab" href="#video" class="active">Video</a>
+                        <li role="presentation">
+                            <a data-toggle="tab" role="tab" href="#video">Video</a>
                         </li>
                         {% endif %}
-                        <li role="presentation">
-                            <a data-toggle="tab" role="tab" href="#reviews">Reviews</a>
+                        <li class="active" role="presentation">
+                            <a data-toggle="tab" role="tab" href="#reviews" class="active">Reviews</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-12">
+                <!-- Start Single Content -->
+                <div class="product_tab_content tab-pane" id="reviews" role="tabpanel">
+                    <div class="pro_feature">
+                        <h2 class="title_3">Reviews</h2>
+                        <!-- DISQUS -->
+                        <div class="comments" id="disqus_thread"></div>
+                        <script>
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://office-ally.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </div>
+                </div>
+                <!-- End Single Content -->
                 <div class="product_details_tab_content tab-content">
                     <!-- Start Single Content -->
                     {% if entry.productVideo %}
@@ -117,33 +144,6 @@
                         </div>
                     </div>
                     {% endif %}
-                    <!-- End Single Content -->
-                    <!-- Start Single Content -->
-                    <div class="product_tab_content tab-pane" id="reviews" role="tabpanel">
-                        <div class="pro_feature">
-                            <h2 class="title_3">Reviews</h2>
-                            <!-- DISQUS -->
-                            <div class="comments" id="disqus_thread"></div>
-                            <script>
-                            /**
-                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                            /*
-                            var disqus_config = function () {
-                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                            };
-                            */
-                            (function() { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://office-ally.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                            })();
-                            </script>
-                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                        </div>
-                    </div>
                     <!-- End Single Content -->
                 </div>
             </div>
