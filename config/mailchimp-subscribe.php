@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'apiKey' => 'f80c696ed1645fde425ca5c6c1e722f1-us14',
-    'audienceId' => 'd977384c42',
+    'apiKey' => '2446bd74affb2e90d9bc1484b643e063-us17',
+    'audienceId' => 'cc34a6c1f2',
     'doubleOptIn' => true,
 ];

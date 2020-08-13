@@ -487,6 +487,10 @@ div.responsive-video iframe {
     height: 100%;
 }
 
+div.comments {
+    margin-top: 3em;
+}
+
 /* CONTACT PAGE */
 
 div.contact-orange > h1,
