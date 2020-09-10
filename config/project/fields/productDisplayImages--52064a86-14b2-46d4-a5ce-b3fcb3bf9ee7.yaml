@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: dea578a7-cdda-4c2c-8531-1eeb383129df
+handle: productDisplayImages
+instructions: 'Enter product images'
+name: 'Product Display Images'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_productdisplayimages}}'
+  maxBlocks: '2'
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

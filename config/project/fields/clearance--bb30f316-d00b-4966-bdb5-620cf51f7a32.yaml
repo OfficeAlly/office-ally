@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: clearance
+instructions: 'Add to clearance items'
+name: Clearance
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: ''
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Add to clearance items.'
+  source: 'group:ccc9c907-8b3f-4524-9f86-b6b7bb9cdbb3'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

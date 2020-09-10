@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 567d39d4-2eb2-46d3-ac0c-f8a7565f04fc
+handle: testimonialDescription
+instructions: 'Enter testimonial description'
+name: 'Testimonial Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: 'Enter testimonial description.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

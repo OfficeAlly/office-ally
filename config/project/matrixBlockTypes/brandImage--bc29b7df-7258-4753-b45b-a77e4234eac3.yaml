@@ -1,0 +1,66 @@
+field: 7c7f3a07-335e-4fe2-adeb-d11d1e6d5d96
+fieldLayouts:
+  d8f57acf-928c-42f7-b517-218d356cf867:
+    tabs:
+      -
+        fields:
+          a63a5541-6d4d-44b6-8e3a-c04d75c29cbb:
+            required: false
+            sortOrder: 2
+          d770c9d4-7d2c-4e44-8dfc-661520e8fd6b:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  a63a5541-6d4d-44b6-8e3a-c04d75c29cbb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Enter image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d770c9d4-7d2c-4e44-8dfc-661520e8fd6b:
+    contentColumnType: string
+    fieldGroup: null
+    handle: brandImage
+    instructions: 'Add a brand image'
+    name: 'Brand Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a brand image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:fd94fd40-107e-4ac1-862b-23eacf9655b4'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: brandImage
+name: 'Brand Image'
+sortOrder: 1

@@ -1,0 +1,45 @@
+fieldLayouts:
+  0d3a477a-4b44-48e2-a9ed-505b90185060:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 65986595-a916-4e90-bcc9-4648731a7e84
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 02f30aa1-a4ad-40cd-a8b1-806746c5698e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 05aacd72-8538-4c3b-b884-029d52c58f2d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5460dfae-f7eb-445c-9d97-e821a329c9c1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 85081b7a-635f-46b4-b89e-fcf174ec1107
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 230afaff-9373-4450-b743-1486c5a658c8
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5ea3d715-2251-46e9-a840-45727140485a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'We Buy!'
+        sortOrder: 1
+handle: weBuy
+hasTitleField: true
+name: 'We Buy'
+section: 970bd99d-cf5f-4d13-be61-4b7dc4c98b9e
+sortOrder: 1
+titleFormat: '{section.name|raw}'

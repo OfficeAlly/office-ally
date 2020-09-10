@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 72d2f75b-f2be-489f-b3ba-76914704934f
+handle: address
+instructions: 'Enter business address'
+name: Address
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter business address.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

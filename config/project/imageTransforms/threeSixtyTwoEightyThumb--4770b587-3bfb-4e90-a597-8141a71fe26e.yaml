@@ -1,0 +1,9 @@
+format: jpg
+handle: threeSixtyTwoEightyThumb
+height: 280
+interlace: none
+mode: crop
+name: '360x280 Thumb'
+position: center-center
+quality: 82
+width: 360

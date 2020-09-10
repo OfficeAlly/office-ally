@@ -1,0 +1,40 @@
+fieldLayouts:
+  c3624491-9e5c-48b9-95d9-1e37fd9757a8:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: brands
+hasUrls: true
+name: Brands
+settings:
+  path: '@root/web/images/brands'
+sortOrder: 3
+type: craft\volumes\Local
+url: '@web/images/brands'

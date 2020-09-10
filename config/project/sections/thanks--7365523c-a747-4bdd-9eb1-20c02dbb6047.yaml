@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: thanks
+name: Thanks
+propagationMethod: all
+siteSettings:
+  35467f97-de19-45ab-b61b-0a59d1adcb4f:
+    enabledByDefault: true
+    hasUrls: true
+    template: thanks/_entry
+    uriFormat: 'contact/{slug}'
+type: single

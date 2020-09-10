@@ -1,0 +1,150 @@
+field: 6d2d7e87-f68b-49c1-afda-6265654f9dd7
+fieldLayouts:
+  80ff63d4-f346-43c9-b60e-57fdabdd7517:
+    tabs:
+      -
+        fields:
+          8b96a2bb-ba93-4760-98b5-969e8ff48626:
+            required: false
+            sortOrder: 1
+          a326aa13-1cc9-4da2-ba88-4cda61d47b7a:
+            required: true
+            sortOrder: 3
+          a7cf4bab-4680-486e-b97a-846781add042:
+            required: false
+            sortOrder: 5
+          b5786623-6ffc-4374-a5d4-a9e67706e6d2:
+            required: true
+            sortOrder: 2
+          cbf357a9-d609-4129-ab22-0d5ae2ee8fb4:
+            required: false
+            sortOrder: 4
+          d80b5295-a05f-4b44-896b-592ec349715d:
+            required: true
+            sortOrder: 6
+        name: Content
+        sortOrder: 1
+fields:
+  8b96a2bb-ba93-4760-98b5-969e8ff48626:
+    contentColumnType: string
+    fieldGroup: null
+    handle: testimonialImage
+    instructions: 'Select testimonial image'
+    name: 'Testimonial Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a testimonial image.'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:55be5bd6-0e8c-4195-8021-3b20db6f32ab'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a326aa13-1cc9-4da2-ba88-4cda61d47b7a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialName
+    instructions: 'Enter client name'
+    name: 'Testimonial Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter client name.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a7cf4bab-4680-486e-b97a-846781add042:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialOrganization
+    instructions: 'Enter client organization'
+    name: 'Testimonial Organization'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter client''s organization.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b5786623-6ffc-4374-a5d4-a9e67706e6d2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Enter image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbf357a9-d609-4129-ab22-0d5ae2ee8fb4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialOccupation
+    instructions: 'Enter client occupation'
+    name: 'Testimonial Occupation'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter client''s occupation.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d80b5295-a05f-4b44-896b-592ec349715d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialDescription
+    instructions: 'Enter testimonial description'
+    name: 'Testimonial Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: 'Enter testimonial description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: testimonial
+name: Testimonial
+sortOrder: 1

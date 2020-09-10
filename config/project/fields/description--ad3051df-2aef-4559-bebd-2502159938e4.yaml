@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: description
+instructions: 'Enter description'
+name: Description
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: 'Enter description.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

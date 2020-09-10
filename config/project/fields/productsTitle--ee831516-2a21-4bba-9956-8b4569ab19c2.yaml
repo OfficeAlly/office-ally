@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: e4b48433-b7e3-491e-9931-fe5be7e39247
+handle: productsTitle
+instructions: 'Enter products title'
+name: 'Products Title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter products title.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

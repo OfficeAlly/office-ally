@@ -1,0 +1,66 @@
+field: 52064a86-14b2-46d4-a5ce-b3fcb3bf9ee7
+fieldLayouts:
+  5b740d7a-69a4-4e97-9f1a-d867e1ae87c7:
+    tabs:
+      -
+        fields:
+          9a0d88e6-9262-4c52-86d5-a0cb45cde3d8:
+            required: false
+            sortOrder: 1
+          c1e78330-81da-4406-80e0-a33dcdbbcaa5:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  9a0d88e6-9262-4c52-86d5-a0cb45cde3d8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: angleImage
+    instructions: 'Add an angled image'
+    name: 'Angle Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add an angled image.'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:aa6df370-8a33-4a44-9865-6c72e08c528c'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  c1e78330-81da-4406-80e0-a33dcdbbcaa5:
+    contentColumnType: text
+    fieldGroup: null
+    handle: angleAltField
+    instructions: 'Enter image description'
+    name: 'Angle Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: angleImage
+name: 'Angle Image'
+sortOrder: 1

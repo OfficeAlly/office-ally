@@ -1,0 +1,75 @@
+field: 04554497-09f2-4f1f-9f79-6f0bb900a031
+fieldLayouts:
+  65180b6a-3320-4777-96de-93759de29da4:
+    tabs:
+      -
+        fields:
+          6d9b0ff4-ac6e-4043-bdf7-7fd581eecd2c:
+            required: false
+            sortOrder: 3
+          94ef4d60-6e4b-4295-94d4-7394d59a4b0f:
+            required: true
+            sortOrder: 2
+          ae2da6b8-2a0f-467a-976e-a1813d198fc7:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  6d9b0ff4-ac6e-4043-bdf7-7fd581eecd2c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialOccupation
+    instructions: 'Enter client occupation'
+    name: 'Testimonial Occupation'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter client occupation.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  94ef4d60-6e4b-4295-94d4-7394d59a4b0f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialClient
+    instructions: 'Enter client name'
+    name: 'Testimonial Client'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter client name.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ae2da6b8-2a0f-467a-976e-a1813d198fc7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialDescription
+    instructions: 'Enter testimonial description'
+    name: 'Testimonial Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: 'Enter testimonial description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: testimonial
+name: Testimonial
+sortOrder: 1

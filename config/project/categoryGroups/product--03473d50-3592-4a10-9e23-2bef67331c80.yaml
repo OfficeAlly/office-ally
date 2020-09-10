@@ -1,0 +1,20 @@
+fieldLayouts:
+  fb5fcd16-ff98-4510-a682-556f39075113:
+    tabs:
+      -
+        fields:
+          ad3051df-2aef-4559-bebd-2502159938e4:
+            required: false
+            sortOrder: 1
+        name: Product
+        sortOrder: 1
+handle: product
+name: Product
+siteSettings:
+  35467f97-de19-45ab-b61b-0a59d1adcb4f:
+    hasUrls: true
+    template: products/_product
+    uriFormat: '{% if parent %}{{ parent.uri }}{% endif %}/{slug}'
+structure:
+  maxLevels: null
+  uid: cbb03f92-6a44-4861-93df-feaac1e34543

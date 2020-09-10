@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: brand
+instructions: 'Select a brand'
+name: Brand
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: ''
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select a brand.'
+  source: 'group:2b7056e7-346b-4ee9-8c67-6170a4235cfc'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

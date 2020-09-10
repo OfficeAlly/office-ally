@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 72d2f75b-f2be-489f-b3ba-76914704934f
+handle: copyright
+instructions: 'Enter copyright information'
+name: Copyright
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter copyright information.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

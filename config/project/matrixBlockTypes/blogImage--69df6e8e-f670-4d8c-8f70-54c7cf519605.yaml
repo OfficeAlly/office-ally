@@ -1,0 +1,66 @@
+field: 42f2073b-9c5a-4f8a-8f6e-2b4c6f9f33f1
+fieldLayouts:
+  cd217f39-d4eb-48ec-91eb-3f2a49ae4914:
+    tabs:
+      -
+        fields:
+          2679ae5e-0ddb-4cfc-a7b8-fff4260ae765:
+            required: true
+            sortOrder: 2
+          b570bdde-4cf7-49ba-9263-8f329059e01e:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2679ae5e-0ddb-4cfc-a7b8-fff4260ae765:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Add image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b570bdde-4cf7-49ba-9263-8f329059e01e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: blogImage
+    instructions: 'Add a blog image'
+    name: 'Blog image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a blog image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: blogImage
+name: 'Blog Image'
+sortOrder: 2

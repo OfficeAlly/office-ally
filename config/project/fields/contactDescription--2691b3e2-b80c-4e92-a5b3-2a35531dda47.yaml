@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 4981693d-2cae-4c77-bd67-048f62c8f24a
+handle: contactDescription
+instructions: 'Enter contact description'
+name: 'Contact Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: 'Enter contact page description.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

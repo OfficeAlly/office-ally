@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: newsletter
+name: Newsletter
+propagationMethod: all
+siteSettings:
+  35467f97-de19-45ab-b61b-0a59d1adcb4f:
+    enabledByDefault: true
+    hasUrls: true
+    template: newsletter/_entry
+    uriFormat: newsletter/thanks
+type: single

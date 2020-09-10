@@ -1,0 +1,40 @@
+fieldLayouts:
+  7c28ceb7-7805-4953-825e-974beb38dd14:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            autofocus: false
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: homeSlider
+hasUrls: true
+name: 'Home Slider'
+settings:
+  path: '@root/web/images/home-slider'
+sortOrder: 7
+type: craft\volumes\Local
+url: '@web/images/home-slider'

@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: dea578a7-cdda-4c2c-8531-1eeb383129df
+handle: productDescription
+instructions: 'Enter product description'
+name: 'Product Description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

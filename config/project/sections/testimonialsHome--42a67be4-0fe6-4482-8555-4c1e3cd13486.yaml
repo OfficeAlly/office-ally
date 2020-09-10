@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: testimonialsHome
+name: 'Testimonials Home'
+propagationMethod: all
+siteSettings:
+  35467f97-de19-45ab-b61b-0a59d1adcb4f:
+    enabledByDefault: true
+    hasUrls: true
+    template: testimonials/index
+    uriFormat: testimonials
+type: single

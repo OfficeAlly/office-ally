@@ -1,0 +1,196 @@
+field: c85cf1b0-a152-43c8-8b75-5cbd302d32e5
+fieldLayouts:
+  cd2317d8-fd74-4421-9749-9f2f14ed3fb1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7b37cdcf-b86e-49f9-b656-e646718ccf9d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e084a387-1d25-423c-aae8-3c7b10e6b968
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f04eb6f1-2665-43b4-8d0f-3f7e9f3737a6
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2029bc22-5351-4edf-8824-7d99c2d7a2a0
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 93597ec3-0dfd-4e8c-ae90-372af2b0946e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7ce669f8-62ba-4fa1-bc7d-3b6ab3acf7ed
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2029bc22-5351-4edf-8824-7d99c2d7a2a0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Enter image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7b37cdcf-b86e-49f9-b656-e646718ccf9d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sliderTitle
+    instructions: 'Enter slider title'
+    name: 'Slider Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: 'Enter slider title.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7ce669f8-62ba-4fa1-bc7d-3b6ab3acf7ed:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLink
+    instructions: 'Enter button link'
+    name: 'Button Link'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter button link'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  93597ec3-0dfd-4e8c-ae90-372af2b0946e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonName
+    instructions: 'Enter button name'
+    name: 'Button Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter button name.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e084a387-1d25-423c-aae8-3c7b10e6b968:
+    contentColumnType: text
+    fieldGroup: null
+    handle: subTitle
+    instructions: 'Enter subtitle'
+    name: 'Sub Title'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  f04eb6f1-2665-43b4-8d0f-3f7e9f3737a6:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sliderImage
+    instructions: 'Add slider image'
+    name: 'Slider Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:0ab4bdd6-a8e7-4444-9348-57fb9a724f5b'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add slider image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:0ab4bdd6-a8e7-4444-9348-57fb9a724f5b'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: homeSlider
+name: 'Home Slider'
+sortOrder: 1

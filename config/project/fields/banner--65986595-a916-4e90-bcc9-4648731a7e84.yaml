@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: banner
+instructions: 'Add banner Image'
+name: Banner
+searchable: true
+settings:
+  allowSelfRelations: ''
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Add a banner image'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:2b014ea8-ce9f-459b-9611-3b04b08029e8'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

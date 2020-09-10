@@ -1,0 +1,25 @@
+fieldLayouts:
+  25ecf4db-ac3c-4c4b-a63a-4135f425156c:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 65986595-a916-4e90-bcc9-4648731a7e84
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 02f30aa1-a4ad-40cd-a8b1-806746c5698e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Products
+        sortOrder: 1
+handle: productsHome
+hasTitleField: true
+name: 'Products Home'
+section: 02ae77c7-27e0-4cec-8a85-e8452fc22058
+sortOrder: 1
+titleFormat: ''

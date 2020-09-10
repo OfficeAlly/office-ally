@@ -1,0 +1,13 @@
+contentColumnType: datetime
+fieldGroup: 540b90d9-8f94-400c-9d2c-f103986c8d06
+handle: blogDate
+instructions: 'Select article date'
+name: 'Blog Date'
+searchable: true
+settings:
+  minuteIncrement: '60'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

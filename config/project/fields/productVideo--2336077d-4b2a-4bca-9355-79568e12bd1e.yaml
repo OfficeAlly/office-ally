@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: dea578a7-cdda-4c2c-8531-1eeb383129df
+handle: productVideo
+instructions: 'Insert video embed code'
+name: 'Product Video'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: 'Insert video embed code.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

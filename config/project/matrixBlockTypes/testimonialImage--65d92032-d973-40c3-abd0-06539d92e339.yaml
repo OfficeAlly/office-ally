@@ -1,0 +1,66 @@
+field: a2e77db5-2f12-490e-b8f6-13795dc352a7
+fieldLayouts:
+  34fbc32e-4778-49f5-96d3-e4cd58176bc1:
+    tabs:
+      -
+        fields:
+          6bf057f4-02ca-44c8-8fee-db3b30b196ea:
+            required: false
+            sortOrder: 1
+          a4d4233f-dae6-473a-be0e-f3b8004d0047:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  6bf057f4-02ca-44c8-8fee-db3b30b196ea:
+    contentColumnType: string
+    fieldGroup: null
+    handle: testimonialImage
+    instructions: 'Select testimonial image'
+    name: 'Testimonial Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a testimonial image.'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:55be5bd6-0e8c-4195-8021-3b20db6f32ab'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a4d4233f-dae6-473a-be0e-f3b8004d0047:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altfield
+    instructions: 'Enter image description'
+    name: AltField
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: testimonialImage
+name: 'Testimonial Image'
+sortOrder: 1

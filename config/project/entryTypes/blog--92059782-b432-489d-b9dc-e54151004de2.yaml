@@ -1,0 +1,41 @@
+fieldLayouts:
+  d16af895-2c65-42d0-b68d-991090a300eb:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 02f30aa1-a4ad-40cd-a8b1-806746c5698e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1240cb7d-d0cf-4577-88f0-e035ac859788
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8cb1cfbc-6552-4be2-a8d2-4071523540bc
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 517ccc5d-b809-4598-9cfc-74f3f5c052f3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 243a7411-b837-49da-9158-e0cf8574fb31
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 42f2073b-9c5a-4f8a-8f6e-2b4c6f9f33f1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Blog
+        sortOrder: 1
+handle: blog
+hasTitleField: true
+name: Blog
+section: 0c638ab5-2f0d-44ce-995e-9ecde986342d
+sortOrder: 1
+titleFormat: ''

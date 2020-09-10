@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 4981693d-2cae-4c77-bd67-048f62c8f24a
+handle: contactTitle
+instructions: 'Enter contact title'
+name: 'Contact Title'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

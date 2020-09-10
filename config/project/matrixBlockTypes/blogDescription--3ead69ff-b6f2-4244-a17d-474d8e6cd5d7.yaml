@@ -1,0 +1,38 @@
+field: 42f2073b-9c5a-4f8a-8f6e-2b4c6f9f33f1
+fieldLayouts:
+  166bf840-4fdc-4373-bc9e-35949cf6b80d:
+    tabs:
+      -
+        fields:
+          0c3c922e-a776-41a9-a630-4c8cf555ceeb:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  0c3c922e-a776-41a9-a630-4c8cf555ceeb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: blogDescription
+    instructions: 'Enter blog description'
+    name: 'Blog Description'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: blogDescription
+name: 'Blog Description'
+sortOrder: 1

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: sectionDescriptions
+instructions: 'Enter section descriptions'
+name: 'Section Descriptions'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_sectiondescriptions}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

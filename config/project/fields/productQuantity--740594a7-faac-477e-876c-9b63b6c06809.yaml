@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: dea578a7-cdda-4c2c-8531-1eeb383129df
+handle: productQuantity
+instructions: 'Enter product quantity'
+name: 'Product Quantity'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter product quantity.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

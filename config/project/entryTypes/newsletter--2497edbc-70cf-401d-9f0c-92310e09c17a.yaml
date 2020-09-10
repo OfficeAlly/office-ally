@@ -1,0 +1,29 @@
+fieldLayouts:
+  d0b795b1-2000-484e-864d-e9bc2cf5b72e:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Newsletter
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 65986595-a916-4e90-bcc9-4648731a7e84
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 02f30aa1-a4ad-40cd-a8b1-806746c5698e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ad3051df-2aef-4559-bebd-2502159938e4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Newsletter
+        sortOrder: 1
+handle: newsletter
+hasTitleField: true
+name: Newsletter
+section: c28654b7-1e8c-4dc7-81ea-1a670f3e96b8
+sortOrder: 1
+titleFormat: '{section.name|raw}'

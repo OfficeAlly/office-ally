@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: e4b48433-b7e3-491e-9931-fe5be7e39247
+handle: featuredSection
+instructions: 'Add featured sections'
+name: 'Featured Section'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_featuredsection}}'
+  maxBlocks: '3'
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

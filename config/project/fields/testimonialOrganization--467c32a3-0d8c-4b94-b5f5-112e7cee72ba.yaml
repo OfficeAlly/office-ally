@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 567d39d4-2eb2-46d3-ac0c-f8a7565f04fc
+handle: testimonialOrganization
+instructions: 'Enter client organization'
+name: 'Testimonial Organization'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Enter client''s organization.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

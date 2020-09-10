@@ -1,0 +1,33 @@
+field: 42f2073b-9c5a-4f8a-8f6e-2b4c6f9f33f1
+fieldLayouts:
+  41d9452e-219f-46a3-916f-2b60b40bf14c:
+    tabs:
+      -
+        fields:
+          11073214-1523-4ef8-a699-437e5cc733ae:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  11073214-1523-4ef8-a699-437e5cc733ae:
+    contentColumnType: text
+    fieldGroup: null
+    handle: blogVideo
+    instructions: 'Enter video embed code'
+    name: 'Blog Video'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '5'
+      multiline: '1'
+      placeholder: 'Enter video embed code.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blogVideo
+name: 'Blog Video'
+sortOrder: 3

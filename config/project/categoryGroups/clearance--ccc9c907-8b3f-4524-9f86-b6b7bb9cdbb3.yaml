@@ -1,0 +1,20 @@
+fieldLayouts:
+  04d6be88-465f-4a17-b8eb-4c49fe9992a8:
+    tabs:
+      -
+        fields:
+          ad3051df-2aef-4559-bebd-2502159938e4:
+            required: false
+            sortOrder: 1
+        name: Clerance
+        sortOrder: 1
+handle: clearance
+name: Clearance
+siteSettings:
+  35467f97-de19-45ab-b61b-0a59d1adcb4f:
+    hasUrls: true
+    template: products/_clearance
+    uriFormat: '{% if parent %}{{ parent.uri }}{% endif %}/{slug}'
+structure:
+  maxLevels: null
+  uid: 492d057a-b15c-4908-8235-b8baf8a380f8

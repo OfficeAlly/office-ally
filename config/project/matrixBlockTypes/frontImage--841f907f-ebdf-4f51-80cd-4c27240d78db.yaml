@@ -1,0 +1,66 @@
+field: 52064a86-14b2-46d4-a5ce-b3fcb3bf9ee7
+fieldLayouts:
+  b96722ba-a5b2-4c93-a747-ad03c521940c:
+    tabs:
+      -
+        fields:
+          5a76d837-be3d-4aaa-a8e5-97e171adc308:
+            required: false
+            sortOrder: 1
+          8e821e54-151d-4dda-bd9f-0fb2a3276bad:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  5a76d837-be3d-4aaa-a8e5-97e171adc308:
+    contentColumnType: string
+    fieldGroup: null
+    handle: frontImage
+    instructions: 'Add a front image'
+    name: 'Front Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a front image.'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:aa6df370-8a33-4a44-9865-6c72e08c528c'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  8e821e54-151d-4dda-bd9f-0fb2a3276bad:
+    contentColumnType: text
+    fieldGroup: null
+    handle: frontAltField
+    instructions: 'Enter image description'
+    name: 'Front Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: frontImage
+name: 'Front Image'
+sortOrder: 2

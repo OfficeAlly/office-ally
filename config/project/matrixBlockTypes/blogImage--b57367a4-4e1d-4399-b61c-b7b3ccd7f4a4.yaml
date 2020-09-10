@@ -1,0 +1,80 @@
+field: 1240cb7d-d0cf-4577-88f0-e035ac859788
+fieldLayouts:
+  b3310b16-5d70-4b9a-821a-fb533e69a554:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7d1d6c62-f7a5-4fad-b938-188597549b09
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2fa6a4ec-7b43-4d5a-81c3-43b519f68692
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2fa6a4ec-7b43-4d5a-81c3-43b519f68692:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Add image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Add image description.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7d1d6c62-f7a5-4fad-b938-188597549b09:
+    contentColumnType: string
+    fieldGroup: null
+    handle: blogImage
+    instructions: 'Select blog featured image'
+    name: 'Blog Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a blog featured image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:737ac79e-ca43-4dca-9284-464610ce75a6'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: blogImage
+name: 'Blog Image'
+sortOrder: 1

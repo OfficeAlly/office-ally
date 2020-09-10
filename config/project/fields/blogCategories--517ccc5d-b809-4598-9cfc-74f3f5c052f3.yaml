@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 540b90d9-8f94-400c-9d2c-f103986c8d06
+handle: blogCategories
+instructions: 'Select blog category'
+name: 'Blog Categories'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: ''
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select a blog category.'
+  source: 'group:f6425b3b-d325-4891-9759-647c27c2c013'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

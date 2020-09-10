@@ -1,0 +1,24 @@
+fieldLayouts:
+  40d2245b-eab4-463e-a975-486d75a40c28:
+    tabs:
+      -
+        fields:
+          1560b866-fb5d-4708-a526-bb5c39615c98:
+            required: false
+            sortOrder: 2
+          1eb8934b-6776-4d75-b80a-292984f37212:
+            required: false
+            sortOrder: 1
+          4c7034a0-b7f6-49fd-a41f-60aaeb639329:
+            required: false
+            sortOrder: 4
+          b79f8fe0-5231-4e8d-895b-d0cf384331eb:
+            required: false
+            sortOrder: 3
+          f7eb86f0-63ec-4134-95db-c43b72a9ad5c:
+            required: false
+            sortOrder: 5
+        name: Footer
+        sortOrder: 1
+handle: footer
+name: Footer

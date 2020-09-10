@@ -1,0 +1,57 @@
+contentColumnType: text
+fieldGroup: 72d2f75b-f2be-489f-b3ba-76914704934f
+handle: socialMedia
+instructions: 'Enter social media links'
+name: 'Social Media'
+searchable: true
+settings:
+  addRowLabel: 'Add a social media link'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Social Media Icon'
+            -
+              - handle
+              - socialMediaIcon
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Social Media Url'
+            -
+              - handle
+              - socialMediaUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

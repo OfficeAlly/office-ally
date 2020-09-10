@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 6fee036c-b72c-4ad5-8091-236fb7445c94
+handle: product
+instructions: 'Select the product type'
+name: Product
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: ''
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select the product type.'
+  source: 'group:03473d50-3592-4a10-9e23-2bef67331c80'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

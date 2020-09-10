@@ -1,0 +1,33 @@
+fieldLayouts:
+  72ebef9e-6eb9-494a-86b1-f8e40a2890f9:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Contact
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 65986595-a916-4e90-bcc9-4648731a7e84
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 02f30aa1-a4ad-40cd-a8b1-806746c5698e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 15b2e837-c9c5-4afa-afa1-02ab9a6bbb11
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2691b3e2-b80c-4e92-a5b3-2a35531dda47
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Contact
+        sortOrder: 1
+handle: contact
+hasTitleField: true
+name: Contact
+section: ef789704-1873-48b9-96f7-4a81eee96f03
+sortOrder: 1
+titleFormat: '{section.name|raw}'

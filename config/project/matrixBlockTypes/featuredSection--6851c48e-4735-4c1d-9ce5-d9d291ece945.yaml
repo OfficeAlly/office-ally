@@ -1,0 +1,75 @@
+field: 7057efa8-9f55-4764-9f44-d8c0a6845fdf
+fieldLayouts:
+  1067376e-37da-4263-92dc-ee9cb181da9e:
+    tabs:
+      -
+        fields:
+          67ac358d-a396-4055-a6f0-f2e3170e3a38:
+            required: false
+            sortOrder: 3
+          ddb55f3c-e1b9-4b42-a1d8-ce8042b130b9:
+            required: true
+            sortOrder: 1
+          fce68024-fda1-4a5f-913f-f6d11e1c6ad0:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  67ac358d-a396-4055-a6f0-f2e3170e3a38:
+    contentColumnType: text
+    fieldGroup: null
+    handle: featuredUrl
+    instructions: 'Enter link to page'
+    name: 'Featured Url'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter link to page'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ddb55f3c-e1b9-4b42-a1d8-ce8042b130b9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: featuredTitle
+    instructions: ''
+    name: 'Featured Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter featured title'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fce68024-fda1-4a5f-913f-f6d11e1c6ad0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: featuredDescription
+    instructions: 'Enter featured section description'
+    name: 'Featured Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: 'Enter featured section description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: featuredSection
+name: 'Featured Section'
+sortOrder: 1
